@@ -7,8 +7,13 @@ sap.ui.controller("zemplist.Employees", {
 */
 	onInit: function() {
 		
-		var oModel = new sap.ui.model.json.JSONModel();
+		/*var oModel = new sap.ui.model.json.JSONModel();
 		oModel.loadData("model/employeeList.json");
+		
+		this.getView().setModel(oModel);*/
+		
+		var oModel = new sap.ui.model.xml.XMLModel();
+		oModel.loadData("model/employeeList.xml");
 		
 		this.getView().setModel(oModel);
 

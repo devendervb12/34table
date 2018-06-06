@@ -2,7 +2,7 @@
 		controllerName="zemplist.Employees" xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Title">
 		<content>
-	        <Table items="{/}">
+	        <Table items="{/element}">
 	           <columns>
 	               <Column>
 	                   <header>

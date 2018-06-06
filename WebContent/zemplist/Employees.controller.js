@@ -15,7 +15,23 @@ sap.ui.controller("zemplist.Employees", {
 		var oModel = new sap.ui.model.xml.XMLModel();
 		oModel.loadData("model/employeeList.xml");
 		
+		//default Model
 		this.getView().setModel(oModel);
+		
+		/*var oModel2 = new sap.ui.model.xml.XMLModel();
+		oModel2.loadData("model/companyList.xml");
+		
+		//default Model
+		this.getView().setModel(oModel2, "company");*/
+		
+		
+		sap.ui.localResources("i18n");
+		var orModel = new sap.ui.model.resource.ResourceModel({
+			bundleName : "i18n.mySource"
+		});
+		
+		// named model
+		this.getView().setModel(orModel, "i18n");
 
 	},
 
